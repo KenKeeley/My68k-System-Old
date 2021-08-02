@@ -12,5 +12,10 @@ electronic computer design. It is a solely non-profit educational project and is
 The My68k System and related peripherals would be ideal as a small project to teach basic computer hardware and software
 principles.
 
+#### SOFTWARE USED
+- [FreeCAD](https://www.freecadweb.org/)
+- [KiCad](http://kicad-pcb.org/)
+- [KiCad StepUp](https://github.com/easyw/kicadStepUpMod/)
+
 Please report any issues and/or bugs via the "Issues" section on github.
 If you have any extra reference material then please submit it via the "Issues" section on github.
