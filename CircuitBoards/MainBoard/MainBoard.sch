@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title "My68k - MainBoard"
 Date "2021-08-03"
 Rev "1.0"
@@ -13,6 +13,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 2850 900  1000 650 
+U 6108A602
+F0 "CPU" 50
+F1 "CPU.sch" 50
+$EndSheet
 $Sheet
 S 2050 5800 1000 1200
 U 5ADF03DA
@@ -24,7 +30,7 @@ F4 "nID1" O R 3050 6600 50
 F5 "nID2" O R 3050 6700 50 
 $EndSheet
 $Sheet
-S 6700 900  1000 650 
+S 6750 900  1000 650 
 U 5ADF03DD
 F0 "Support" 50
 F1 "Support.sch" 50

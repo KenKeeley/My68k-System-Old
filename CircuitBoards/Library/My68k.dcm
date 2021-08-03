@@ -65,6 +65,11 @@ D LED
 K led diode light-emitting-diode
 $ENDCMP
 #
+$CMP MC68030RC
+D Motorola 68030 16/32-bit Microprocessor
+K MC68030 Microprocessor CPU
+$ENDCMP
+#
 $CMP Mounting_Hole_M3
 D Mounting Hole, M3 Screw
 K M3 hole
