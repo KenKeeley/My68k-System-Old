@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name My68k)(type Legacy)(uri ${MYLIBPATH}/My68k.lib)(options "")(descr ""))
+)

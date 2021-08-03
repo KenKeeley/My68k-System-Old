@@ -1,8 +1,28 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 39-28-1103
+D 10 Pin Mini-Fit Jr 5566
+K connector
+$ENDCMP
+#
+$CMP DIN41612-C-96-F
+D Eurocard DIN 41612, Type C, 96 Pin, Female
+K din41612
+$ENDCMP
+#
+$CMP DIN41612-C-96-M-RA
+D Eurocard DIN 41612, Type C, 96 Pin, Male
+K din41612
+$ENDCMP
+#
 $CMP Mounting_Hole_M3
 D Mounting Hole, M3 Screw
 K M3 hole
+$ENDCMP
+#
+$CMP PCI_Bracket
+D Low Profile PCI Bracket
+K pci bracket
 $ENDCMP
 #
 #End Doc Library
