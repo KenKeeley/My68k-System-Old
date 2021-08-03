@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 5
+Sheet 4 6
 Title "My68k - MainBoard, Expansion Slot"
 Date "2021-08-03"
 Rev "1.0"

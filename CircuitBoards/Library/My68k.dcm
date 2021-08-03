@@ -5,14 +5,34 @@ D 10 Pin Mini-Fit Jr 5566
 K connector
 $ENDCMP
 #
+$CMP 74HCT00
+D quad 2-input NAND gate
+K TTL nand 2-input
+$ENDCMP
+#
 $CMP 74HCT30
 D 8-input NAND
 K TTL Nand8
 $ENDCMP
 #
+$CMP 74LS00
+D quad 2-input NAND gate
+K TTL nand 2-input
+$ENDCMP
+#
+$CMP 74LS148
+D Priority Encoder 3 to 8 cascadable
+K TTL ENCOD
+$ENDCMP
+#
 $CMP 74LS30
 D 8-input NAND
 K TTL Nand8
+$ENDCMP
+#
+$CMP DS1813-5
+D Power supply supervisor with pushbutton reset, Threshold 4.63V
+K Supervisor Reset
 $ENDCMP
 #
 $CMP Decoder
@@ -40,14 +60,39 @@ D Jumper
 K jumper
 $ENDCMP
 #
+$CMP LED
+D LED
+K led diode light-emitting-diode
+$ENDCMP
+#
 $CMP Mounting_Hole_M3
 D Mounting Hole, M3 Screw
 K M3 hole
 $ENDCMP
 #
+$CMP OSC-08
+D Crystal Clock Oscillator, DIP8-style metal package
+K Crystal Clock Oscillator
+$ENDCMP
+#
 $CMP PCI_Bracket
 D Low Profile PCI Bracket
 K pci bracket
+$ENDCMP
+#
+$CMP R
+D Resistor
+K r res resistor
+$ENDCMP
+#
+$CMP Res_Array_09
+D Resistor Array 9-pin SIP
+K r res resistor
+$ENDCMP
+#
+$CMP SW_Push
+D Push button switch, generic, two pins
+K switch normally-open pushbutton push-button
 $ENDCMP
 #
 #End Doc Library
