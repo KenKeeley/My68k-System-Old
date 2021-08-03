@@ -5,6 +5,21 @@ D 10 Pin Mini-Fit Jr 5566
 K connector
 $ENDCMP
 #
+$CMP 74HCT30
+D 8-input NAND
+K TTL Nand8
+$ENDCMP
+#
+$CMP 74LS30
+D 8-input NAND
+K TTL Nand8
+$ENDCMP
+#
+$CMP Decoder
+D Altera MAX 7000S 128-Macrocell CPLD, 5V, PQFP-100
+K MAX7000S
+$ENDCMP
+#
 $CMP DIN41612-C-96-F
 D Eurocard DIN 41612, Type C, 96 Pin, Female
 K din41612
@@ -13,6 +28,16 @@ $ENDCMP
 $CMP DIN41612-C-96-M-RA
 D Eurocard DIN 41612, Type C, 96 Pin, Male
 K din41612
+$ENDCMP
+#
+$CMP JTAG-10
+D 10-pin JTAG connector
+K JTAG Connector
+$ENDCMP
+#
+$CMP Jumper
+D Jumper
+K jumper
 $ENDCMP
 #
 $CMP Mounting_Hole_M3

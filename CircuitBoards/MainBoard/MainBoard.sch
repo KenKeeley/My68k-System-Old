@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title "My68k - MainBoard"
 Date "2021-08-03"
 Rev "1.0"
@@ -13,6 +13,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 2050 5800 1000 1200
+U 5ADF03DA
+F0 "Decoder" 50
+F1 "Decoder.sch" 50
+F2 "nIACKOUT" O R 3050 5950 50 
+F3 "nBGOUT" O R 3050 6150 50 
+F4 "nID1" O R 3050 6600 50 
+F5 "nID2" O R 3050 6700 50 
+$EndSheet
 $Sheet
 S 5600 5800 1000 650 
 U 61077BCB
@@ -107,6 +117,28 @@ F 3 "" H 6800 7400 50  0001 C CNN
 	1    6350 7400
 	1    0    0    -1  
 $EndComp
+$Comp
+L My68k:Jumper JP01
+U 1 1 5E4FBBC7
+P 5900 5200
+F 0 "JP01" V 5750 5200 50  0000 C CNN
+F 1 "Jumper" H 5750 5200 50  0001 C CNN
+F 2 "My68k:Jumper" H 5750 5200 50  0001 C CNN
+F 3 "" V 5900 5200 50  0001 C CNN
+	1    5900 5200
+	0    -1   1    0   
+$EndComp
+$Comp
+L My68k:Jumper JP02
+U 1 1 5E4FBDF5
+P 6300 5200
+F 0 "JP02" V 6150 5200 50  0000 C CNN
+F 1 "Jumper" H 6150 5200 50  0001 C CNN
+F 2 "My68k:Jumper" H 6150 5200 50  0001 C CNN
+F 3 "" V 6300 5200 50  0001 C CNN
+	1    6300 5200
+	0    -1   1    0   
+$EndComp
 Wire Notes Line
 	4600 7200 7100 7200
 Wire Notes Line
@@ -115,16 +147,64 @@ Wire Notes Line
 	7100 7200 7100 7550
 Wire Notes Line
 	7100 7550 4600 7550
-Text Notes 5450 7300 0    50   ~ 0
-Board Mounting Holes
+Wire Wire Line
+	3050 5950 5250 5950
+Wire Wire Line
+	3050 6150 5450 6150
+Wire Wire Line
+	5850 5400 5850 5450
+Wire Wire Line
+	5850 5450 5250 5450
+Wire Wire Line
+	5250 5450 5250 5950
+Wire Wire Line
+	5250 5950 5600 5950
+Wire Wire Line
+	5450 6150 5450 5550
+Wire Wire Line
+	6250 5550 6250 5400
+Wire Wire Line
+	5450 6150 5600 6150
+Wire Wire Line
+	5950 5400 5950 5450
+Wire Wire Line
+	5950 5450 6750 5450
+Wire Wire Line
+	6350 5400 6350 5550
+Wire Wire Line
+	6950 5550 6950 6150
+Wire Wire Line
+	5450 5550 6250 5550
+Wire Wire Line
+	6350 5550 6950 5550
+Wire Wire Line
+	6750 5950 6750 5450
+Wire Wire Line
+	6600 6150 6950 6150
+Wire Wire Line
+	6600 5950 6750 5950
+Wire Wire Line
+	6750 5950 7100 5950
+Wire Wire Line
+	6950 6150 7100 6150
+Wire Wire Line
+	3050 6600 5350 6600
+Wire Wire Line
+	5350 6600 5350 6350
+Wire Wire Line
+	5350 6350 5600 6350
+Wire Wire Line
+	3050 6700 6850 6700
+Wire Wire Line
+	6850 6700 6850 6350
+Wire Wire Line
+	6850 6350 7100 6350
+Connection ~ 6750 5950
+Connection ~ 6950 6150
+Connection ~ 5250 5950
+Connection ~ 5450 6150
 NoConn ~ 8100 5950
 NoConn ~ 8100 6150
-NoConn ~ 7100 5950
-NoConn ~ 7100 6150
-NoConn ~ 7100 6350
-NoConn ~ 6600 5950
-NoConn ~ 6600 6150
-NoConn ~ 5600 5950
-NoConn ~ 5600 6150
-NoConn ~ 5600 6350
+Text Notes 5450 7300 0    50   ~ 0
+Board Mounting Holes
 $EndSCHEMATC
