@@ -75,6 +75,11 @@ D Motorola 68030 16/32-bit Microprocessor
 K MC68030 Microprocessor CPU
 $ENDCMP
 #
+$CMP MC68882FN
+D Motorola 68882 Floating-Point Co-processor
+K MC68882 FPU
+$ENDCMP
+#
 $CMP Mounting_Hole_M3
 D Mounting Hole, M3 Screw
 K M3 hole
