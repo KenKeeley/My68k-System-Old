@@ -5,6 +5,11 @@ D 10 Pin Mini-Fit Jr 5566
 K connector
 $ENDCMP
 #
+$CMP 61C512
+D 64k x 8 bit low power SRAM
+K memory SRAM
+$ENDCMP
+#
 $CMP 74HCT00
 D quad 2-input NAND gate
 K TTL nand 2-input
@@ -93,6 +98,11 @@ $ENDCMP
 $CMP Res_Array_09
 D Resistor Array 9-pin SIP
 K r res resistor
+$ENDCMP
+#
+$CMP SST29EE010
+D Silicon Storage Technology 128k x 8 Flash ROM
+K 128k flash rom
 $ENDCMP
 #
 $CMP SW_Push

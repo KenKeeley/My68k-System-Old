@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 7
+Sheet 1 8
 Title "My68k - MainBoard"
-Date "2021-08-03"
+Date "2021-08-06"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"
@@ -34,6 +34,12 @@ S 6750 900  1000 650
 U 5ADF03DD
 F0 "Support" 50
 F1 "Support.sch" 50
+$EndSheet
+$Sheet
+S 5450 900  1000 650 
+U 5AC3FCBC
+F0 "Memory" 50
+F1 "Memory.sch" 50
 $EndSheet
 $Sheet
 S 4100 5800 1000 650 
@@ -215,8 +221,8 @@ Connection ~ 5250 5950
 Connection ~ 5450 6150
 Connection ~ 3750 5950
 Connection ~ 3950 6150
-NoConn ~ 6600 5950
-NoConn ~ 6600 6150
 Text Notes 5450 7300 0    50   ~ 0
 Board Mounting Holes
+NoConn ~ 6600 6150
+NoConn ~ 6600 5950
 $EndSCHEMATC
