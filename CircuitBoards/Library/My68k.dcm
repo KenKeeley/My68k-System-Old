@@ -35,14 +35,24 @@ D 8-input NAND
 K TTL Nand8
 $ENDCMP
 #
-$CMP DS1813-5
-D Power supply supervisor with pushbutton reset, Threshold 4.63V
-K Supervisor Reset
+$CMP C
+D Unpolarized capacitor
+K capacitor cap
 $ENDCMP
 #
-$CMP Decoder
-D Altera MAX 7000S 128-Macrocell CPLD, 5V, PQFP-100
-K MAX7000S
+$CMP CP
+D Polarised capacitor
+K cap capacitor
+$ENDCMP
+#
+$CMP Crystal
+D Two pin crystal
+K quartz ceramic resonator oscillator
+$ENDCMP
+#
+$CMP DB9_2xMale
+D 2x 9-pin male D-SUB connector
+K connector male D-SUB
 $ENDCMP
 #
 $CMP DIN41612-C-96-F
@@ -53,6 +63,16 @@ $ENDCMP
 $CMP DIN41612-C-96-M-RA
 D Eurocard DIN 41612, Type C, 96 Pin, Male
 K din41612
+$ENDCMP
+#
+$CMP DS1813-5
+D Power supply supervisor with pushbutton reset, Threshold 4.63V
+K Supervisor Reset
+$ENDCMP
+#
+$CMP Decoder
+D Altera MAX 7000S 128-Macrocell CPLD, 5V, PQFP-100
+K MAX7000S
 $ENDCMP
 #
 $CMP JTAG-10
@@ -70,9 +90,19 @@ D LED
 K led diode light-emitting-diode
 $ENDCMP
 #
+$CMP MAX238
+D Quad RS232 driver/receiver, 5V supply, 120kb/s, 0C-70C
+K rs232 uart transceiver line-driver
+$ENDCMP
+#
 $CMP MC68030RC
 D Motorola 68030 16/32-bit Microprocessor
 K MC68030 Microprocessor CPU
+$ENDCMP
+#
+$CMP MC68681
+D Dual Channel UART
+K UART serial
 $ENDCMP
 #
 $CMP MC68882FN

@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 9
+Sheet 4 10
 Title "My68k - MainBoard, Decoder"
-Date "2021-08-06"
+Date "2021-08-11"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"
