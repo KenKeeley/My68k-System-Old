@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 10
+Sheet 1 11
 Title "My68k - MainBoard"
-Date "2021-08-11"
+Date "2021-08-13"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"
@@ -54,6 +54,12 @@ F0 "DUART" 50
 F1 "DUART.sch" 50
 $EndSheet
 $Sheet
+S 3450 2200 1000 650 
+U 6108A600
+F0 "ATA" 50
+F1 "ATA.sch" 50
+$EndSheet
+$Sheet
 S 4100 5800 1000 650 
 U 61077BCB
 F0 "Expansion Slot 1" 50
@@ -84,8 +90,30 @@ $EndSheet
 $Comp
 L My68k:Mounting_Hole_M3 MH1
 U 1 1 5E55EBC1
+P 4950 7400
+F 0 "MH1" H 4950 7300 50  0001 C CNN
+F 1 "Mounting_Hole_M3" H 4950 7550 50  0001 C CNN
+F 2 "My68k:Mounting_Hole_M3" H 5400 7400 50  0001 C CNN
+F 3 "" H 5400 7400 50  0001 C CNN
+	1    4950 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L My68k:Mounting_Hole_M3 MH2
+U 1 1 5E55F285
+P 5150 7400
+F 0 "MH2" H 5150 7300 50  0001 C CNN
+F 1 "Mounting_Hole_M3" H 5150 7550 50  0001 C CNN
+F 2 "My68k:Mounting_Hole_M3" H 5600 7400 50  0001 C CNN
+F 3 "" H 5600 7400 50  0001 C CNN
+	1    5150 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L My68k:Mounting_Hole_M3 MH3
+U 1 1 5E5631EB
 P 5350 7400
-F 0 "MH1" H 5350 7300 50  0001 C CNN
+F 0 "MH3" H 5350 7300 50  0001 C CNN
 F 1 "Mounting_Hole_M3" H 5350 7550 50  0001 C CNN
 F 2 "My68k:Mounting_Hole_M3" H 5800 7400 50  0001 C CNN
 F 3 "" H 5800 7400 50  0001 C CNN
@@ -93,10 +121,10 @@ F 3 "" H 5800 7400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L My68k:Mounting_Hole_M3 MH2
-U 1 1 5E55F285
+L My68k:Mounting_Hole_M3 MH4
+U 1 1 5E567191
 P 5550 7400
-F 0 "MH2" H 5550 7300 50  0001 C CNN
+F 0 "MH4" H 5550 7300 50  0001 C CNN
 F 1 "Mounting_Hole_M3" H 5550 7550 50  0001 C CNN
 F 2 "My68k:Mounting_Hole_M3" H 6000 7400 50  0001 C CNN
 F 3 "" H 6000 7400 50  0001 C CNN
@@ -104,10 +132,10 @@ F 3 "" H 6000 7400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L My68k:Mounting_Hole_M3 MH3
-U 1 1 5E5631EB
+L My68k:Mounting_Hole_M3 MH5
+U 1 1 5E56B121
 P 5750 7400
-F 0 "MH3" H 5750 7300 50  0001 C CNN
+F 0 "MH5" H 5750 7300 50  0001 C CNN
 F 1 "Mounting_Hole_M3" H 5750 7550 50  0001 C CNN
 F 2 "My68k:Mounting_Hole_M3" H 6200 7400 50  0001 C CNN
 F 3 "" H 6200 7400 50  0001 C CNN
@@ -115,10 +143,10 @@ F 3 "" H 6200 7400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L My68k:Mounting_Hole_M3 MH4
-U 1 1 5E567191
+L My68k:Mounting_Hole_M3 MH6
+U 1 1 5E56F1B9
 P 5950 7400
-F 0 "MH4" H 5950 7300 50  0001 C CNN
+F 0 "MH6" H 5950 7300 50  0001 C CNN
 F 1 "Mounting_Hole_M3" H 5950 7550 50  0001 C CNN
 F 2 "My68k:Mounting_Hole_M3" H 6400 7400 50  0001 C CNN
 F 3 "" H 6400 7400 50  0001 C CNN
@@ -126,25 +154,14 @@ F 3 "" H 6400 7400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L My68k:Mounting_Hole_M3 MH5
-U 1 1 5E56B121
+L My68k:Mounting_Hole_M3 MH7
+U 1 1 5E573338
 P 6150 7400
-F 0 "MH5" H 6150 7300 50  0001 C CNN
+F 0 "MH7" H 6150 7300 50  0001 C CNN
 F 1 "Mounting_Hole_M3" H 6150 7550 50  0001 C CNN
 F 2 "My68k:Mounting_Hole_M3" H 6600 7400 50  0001 C CNN
 F 3 "" H 6600 7400 50  0001 C CNN
 	1    6150 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L My68k:Mounting_Hole_M3 MH6
-U 1 1 5E56F1B9
-P 6350 7400
-F 0 "MH6" H 6350 7300 50  0001 C CNN
-F 1 "Mounting_Hole_M3" H 6350 7550 50  0001 C CNN
-F 2 "My68k:Mounting_Hole_M3" H 6800 7400 50  0001 C CNN
-F 3 "" H 6800 7400 50  0001 C CNN
-	1    6350 7400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -237,4 +254,37 @@ NoConn ~ 6600 5950
 NoConn ~ 6600 6150
 Text Notes 5450 7300 0    50   ~ 0
 Board Mounting Holes
+$Comp
+L My68k:Mounting_Hole_M3 MH8
+U 1 1 61BC1FCE
+P 6350 7400
+F 0 "MH8" H 6350 7300 50  0001 C CNN
+F 1 "Mounting_Hole_M3" H 6350 7550 50  0001 C CNN
+F 2 "My68k:Mounting_Hole_M3" H 6800 7400 50  0001 C CNN
+F 3 "" H 6800 7400 50  0001 C CNN
+	1    6350 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L My68k:Mounting_Hole_M3 MH9
+U 1 1 61BC204C
+P 6550 7400
+F 0 "MH9" H 6550 7300 50  0001 C CNN
+F 1 "Mounting_Hole_M3" H 6550 7550 50  0001 C CNN
+F 2 "My68k:Mounting_Hole_M3" H 7000 7400 50  0001 C CNN
+F 3 "" H 7000 7400 50  0001 C CNN
+	1    6550 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L My68k:Mounting_Hole_M3 MH10
+U 1 1 61BC5890
+P 6750 7400
+F 0 "MH10" H 6750 7300 50  0001 C CNN
+F 1 "Mounting_Hole_M3" H 6750 7550 50  0001 C CNN
+F 2 "My68k:Mounting_Hole_M3" H 7200 7400 50  0001 C CNN
+F 3 "" H 7200 7400 50  0001 C CNN
+	1    6750 7400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

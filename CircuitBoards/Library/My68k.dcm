@@ -15,6 +15,11 @@ D quad 2-input NAND gate
 K TTL nand 2-input
 $ENDCMP
 #
+$CMP 74HCT245
+D Octal BUS Transceivers, 3-State outputs
+K TTL BUS 3State
+$ENDCMP
+#
 $CMP 74HCT30
 D 8-input NAND
 K TTL Nand8
@@ -30,9 +35,19 @@ D Priority Encoder 3 to 8 cascadable
 K TTL ENCOD
 $ENDCMP
 #
+$CMP 74LS245
+D Octal BUS Transceivers, 3-State outputs
+K TTL BUS 3State
+$ENDCMP
+#
 $CMP 74LS30
 D 8-input NAND
 K TTL Nand8
+$ENDCMP
+#
+$CMP 87758-4416
+D Generic connector, dual row, 02x22)
+K connector
 $ENDCMP
 #
 $CMP C
