@@ -50,6 +50,11 @@ D Generic connector, dual row, 02x22)
 K connector
 $ENDCMP
 #
+$CMP Battery
+D Multiple-cell battery
+K batt voltage-source cell
+$ENDCMP
+#
 $CMP C
 D Unpolarized capacitor
 K capacitor cap
@@ -78,6 +83,11 @@ $ENDCMP
 $CMP DIN41612-C-96-M-RA
 D Eurocard DIN 41612, Type C, 96 Pin, Male
 K din41612
+$ENDCMP
+#
+$CMP DS12885
+D Real-time clock
+K rtc clock
 $ENDCMP
 #
 $CMP DS1813-5

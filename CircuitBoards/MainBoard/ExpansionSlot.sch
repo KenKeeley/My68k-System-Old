@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 9 11
 Title "My68k - MainBoard, Expansion Slot"
-Date "2021-08-13"
+Date "2021-08-17"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"
