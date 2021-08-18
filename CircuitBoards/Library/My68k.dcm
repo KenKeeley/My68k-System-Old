@@ -15,6 +15,11 @@ D quad 2-input NAND gate
 K TTL nand 2-input
 $ENDCMP
 #
+$CMP 74HCT05
+D Inverter Open Collect
+K TTL not inv OpenCol
+$ENDCMP
+#
 $CMP 74HCT245
 D Octal BUS Transceivers, 3-State outputs
 K TTL BUS 3State
@@ -28,6 +33,16 @@ $ENDCMP
 $CMP 74LS00
 D quad 2-input NAND gate
 K TTL nand 2-input
+$ENDCMP
+#
+$CMP 74LS05
+D Inverter Open Collect
+K TTL not inv OpenCol
+$ENDCMP
+#
+$CMP 74LS06
+D Inverter Open Collect
+K TTL not inv OpenCol
 $ENDCMP
 #
 $CMP 74LS148
@@ -98,6 +113,11 @@ $ENDCMP
 $CMP Decoder
 D Altera MAX 7000S 128-Macrocell CPLD, 5V, PQFP-100
 K MAX7000S
+$ENDCMP
+#
+$CMP FUSE
+D Fuse, generic
+K fuse
 $ENDCMP
 #
 $CMP JTAG-10

@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 11
+Sheet 1 12
 Title "My68k - MainBoard"
-Date "2021-08-17"
+Date "2021-08-18"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"
@@ -58,6 +58,12 @@ S 3450 2200 1000 650
 U 6108A600
 F0 "ATA" 50
 F1 "ATA.sch" 50
+$EndSheet
+$Sheet
+S 4750 2200 1000 650 
+U 611C4559
+F0 "PS2" 50
+F1 "PS2.sch" 50
 $EndSheet
 $Sheet
 S 4100 5800 1000 650 
