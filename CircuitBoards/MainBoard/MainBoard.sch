@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 12
+Sheet 1 17
 Title "My68k - MainBoard"
-Date "2021-08-18"
+Date "2021-08-19"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"
@@ -64,6 +64,52 @@ S 4750 2200 1000 650
 U 611C4559
 F0 "PS2" 50
 F1 "PS2.sch" 50
+$EndSheet
+$Sheet
+S 2000 3350 1050 1500
+U 611F3778
+F0 "DRAM Controller" 50
+F1 "Dram.sch" 50
+F2 "nRAS0" O R 3050 4050 50 
+F3 "nRAS1" O R 3050 4150 50 
+F4 "nRAS2" O R 3050 4250 50 
+F5 "nRAS3" O R 3050 4350 50 
+F6 "nRAS4" O R 3050 4450 50 
+F7 "nRAS5" O R 3050 4550 50 
+F8 "nRAS6" O R 3050 4650 50 
+F9 "nRAS7" O R 3050 4750 50 
+$EndSheet
+$Sheet
+S 4100 3350 1000 700 
+U 611F2FFA
+F0 "Simm Slot 1" 50
+F1 "SimmSlot.sch" 50
+F2 "nRAS0" I L 4100 3800 50 
+F3 "nRAS1" I L 4100 3900 50 
+$EndSheet
+$Sheet
+S 5600 3350 1000 700 
+U 611F33B1
+F0 "Simm Slot 2" 50
+F1 "SimmSlot.sch" 50
+F2 "nRAS0" I L 5600 3800 50 
+F3 "nRAS1" I L 5600 3900 50 
+$EndSheet
+$Sheet
+S 7100 3350 1000 700 
+U 611F34EF
+F0 "Simm Slot 3" 50
+F1 "SimmSlot.sch" 50
+F2 "nRAS0" I L 7100 3800 50 
+F3 "nRAS1" I L 7100 3900 50 
+$EndSheet
+$Sheet
+S 8600 3350 1000 700 
+U 611F3638
+F0 "Simm Slot 4" 50
+F1 "SimmSlot.sch" 50
+F2 "nRAS0" I L 8600 3800 50 
+F3 "nRAS1" I L 8600 3900 50 
 $EndSheet
 $Sheet
 S 4100 5800 1000 650 
@@ -293,4 +339,52 @@ F 3 "" H 7200 7400 50  0001 C CNN
 	1    6750 7400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3050 4350 5350 4350
+Wire Wire Line
+	5350 4350 5350 3900
+Wire Wire Line
+	3050 4550 6850 4550
+Wire Wire Line
+	6850 4550 6850 3900
+Wire Wire Line
+	3050 4650 8300 4650
+Wire Wire Line
+	8300 4650 8300 3800
+Wire Wire Line
+	3050 4450 6750 4450
+Wire Wire Line
+	6750 4450 6750 3800
+Wire Wire Line
+	3050 4750 8400 4750
+Wire Wire Line
+	8400 4750 8400 3900
+Wire Wire Line
+	3050 4250 5250 4250
+Wire Wire Line
+	5250 4250 5250 3800
+Wire Wire Line
+	5250 3800 5600 3800
+Wire Wire Line
+	8300 3800 8600 3800
+Wire Wire Line
+	8400 3900 8600 3900
+Wire Wire Line
+	7100 3900 6850 3900
+Wire Wire Line
+	7100 3800 6750 3800
+Wire Wire Line
+	5600 3900 5350 3900
+Wire Wire Line
+	4100 3900 3900 3900
+Wire Wire Line
+	3900 3900 3900 4150
+Wire Wire Line
+	3900 4150 3050 4150
+Wire Wire Line
+	4100 3800 3800 3800
+Wire Wire Line
+	3800 3800 3800 4050
+Wire Wire Line
+	3800 4050 3050 4050
 $EndSCHEMATC

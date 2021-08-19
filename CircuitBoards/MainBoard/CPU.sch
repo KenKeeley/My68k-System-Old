@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 12
+Sheet 2 17
 Title "My68k - MainBoard, CPU"
-Date "2021-08-18"
+Date "2021-08-19"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"

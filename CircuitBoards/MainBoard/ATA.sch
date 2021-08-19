@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 12
+Sheet 8 17
 Title "My68k - MainBoard, ATA"
-Date "2021-08-18"
+Date "2021-08-19"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"

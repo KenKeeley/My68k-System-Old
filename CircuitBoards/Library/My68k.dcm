@@ -100,6 +100,11 @@ D Eurocard DIN 41612, Type C, 96 Pin, Male
 K din41612
 $ENDCMP
 #
+$CMP DRAMCRTL
+D Altera MAX 7000S 128-Macrocell CPLD, 5V, PQFP-100
+K MAX7000S
+$ENDCMP
+#
 $CMP DS12885
 D Real-time clock
 K rtc clock
