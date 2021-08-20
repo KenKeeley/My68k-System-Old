@@ -30,6 +30,11 @@ D 8-input NAND
 K TTL Nand8
 $ENDCMP
 #
+$CMP 74HCT74
+D Dual D Flip-flop, Set & Reset
+K TTL DFF
+$ENDCMP
+#
 $CMP 74LS00
 D quad 2-input NAND gate
 K TTL nand 2-input
@@ -60,6 +65,11 @@ D 8-input NAND
 K TTL Nand8
 $ENDCMP
 #
+$CMP 74LS74
+D Dual D Flip-flop, Set & Reset
+K TTL DFF
+$ENDCMP
+#
 $CMP 87758-4416
 D Generic connector, dual row, 02x22)
 K connector
@@ -68,6 +78,10 @@ $ENDCMP
 $CMP Battery
 D Multiple-cell battery
 K batt voltage-source cell
+$ENDCMP
+#
+$CMP BI_LED_K
+D BiColor LED, Common Cathode
 $ENDCMP
 #
 $CMP C
@@ -83,6 +97,10 @@ $ENDCMP
 $CMP Crystal
 D Two pin crystal
 K quartz ceramic resonator oscillator
+$ENDCMP
+#
+$CMP D
+D Diode
 $ENDCMP
 #
 $CMP DB9_2xMale
