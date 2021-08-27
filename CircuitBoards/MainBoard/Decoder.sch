@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 17
+Sheet 4 18
 Title "My68k - MainBoard, Decoder"
-Date "2021-08-20"
+Date "2021-08-27"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"
@@ -281,7 +281,6 @@ Wire Wire Line
 Connection ~ 5050 1150
 Wire Wire Line
 	5050 1150 5100 1150
-NoConn ~ 4050 4500
 Text GLabel 3900 3200 0    50   Output ~ 0
 nDSACK1
 Wire Wire Line
@@ -365,7 +364,6 @@ F 3 "" H 5050 3950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 6050 4900
-NoConn ~ 4050 4000
 Wire Wire Line
 	4050 4800 3900 4800
 Wire Wire Line
@@ -462,7 +460,7 @@ L power:GND #PWR0187
 U 1 1 6124A866
 P 7850 3850
 F 0 "#PWR0187" H 7850 3600 50  0001 C CNN
-F 1 "GND" H 7855 3677 50  0000 C CNN
+F 1 "GND" H 7855 3677 50  0001 C CNN
 F 2 "" H 7850 3850 50  0001 C CNN
 F 3 "" H 7850 3850 50  0001 C CNN
 	1    7850 3850
@@ -652,7 +650,6 @@ Text HLabel 6200 4400 2    50   Output ~ 0
 nID1
 Text HLabel 6200 4500 2    50   Output ~ 0
 nID2
-NoConn ~ 4050 4300
 Wire Wire Line
 	6050 6300 6450 6300
 Wire Wire Line
@@ -679,6 +676,15 @@ Wire Wire Line
 Connection ~ 7200 6100
 Wire Wire Line
 	7200 6400 7200 6100
+NoConn ~ 4050 4000
+Text GLabel 3900 4300 0    50   Input ~ 0
+nCS_Net
+Text GLabel 3900 4500 0    50   Input ~ 0
+DTACK_NET
+Wire Wire Line
+	3900 4300 4050 4300
+Wire Wire Line
+	3900 4500 4050 4500
 NoConn ~ 6050 4600
 NoConn ~ 6050 4800
 Wire Bus Line

@@ -5,6 +5,11 @@ D 10 Pin Mini-Fit Jr 5566
 K connector
 $ENDCMP
 #
+$CMP 5-2301994-2
+D 1 Port RJ45 Magjack Connector Through Hole 10/100 Base-T
+K RJ45 Magjack
+$ENDCMP
+#
 $CMP 61C512
 D 64k x 8 bit low power SRAM
 K memory SRAM
@@ -73,6 +78,10 @@ $ENDCMP
 $CMP 87758-4416
 D Generic connector, dual row, 02x22)
 K connector
+$ENDCMP
+#
+$CMP AT93C46
+D 1K, 64 X 16 SERIAL EEPROM
 $ENDCMP
 #
 $CMP Battery

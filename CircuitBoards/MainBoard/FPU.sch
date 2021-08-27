@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 17
+Sheet 3 18
 Title "My68k - MainBoard, FPU"
-Date "2021-08-20"
+Date "2021-08-27"
 Rev "1.0"
 Comp ""
 Comment1 "Kenneth Keeley"
