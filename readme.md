@@ -16,6 +16,7 @@ principles.
 - [FreeCAD](https://www.freecadweb.org/)
 - [KiCad](http://kicad-pcb.org/)
 - [KiCad StepUp](https://github.com/easyw/kicadStepUpMod/)
+- [Quartus II Web Edition](https://fpgasoftware.intel.com/13.1/)
 
 Please report any issues and/or bugs via the "Issues" section on github.
 If you have any extra reference material then please submit it via the "Issues" section on github.
