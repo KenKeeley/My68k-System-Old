@@ -55,17 +55,21 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Support -section_id Suppo
 set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
 set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING OFF
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
-set_global_assignment -name EDA_TEST_BENCH_FILE Support.vht -section_id Support_TestBench
-set_global_assignment -name EDA_TEST_BENCH_FILE Clock_Div_2.vht -section_id Support_TestBench
-set_global_assignment -name EDA_TEST_BENCH_FILE Clock_Div_5.vht -section_id Support_TestBench
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_89 -to Clk
+set_location_assignment PIN_91 -to nReset
+set_location_assignment PIN_94 -to CPU_Clock
+set_location_assignment PIN_95 -to PS2_Clock
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name VHDL_FILE Support.vhd
 set_global_assignment -name VHDL_TEST_BENCH_FILE Support.vht
 set_global_assignment -name VHDL_FILE Clock_Div_2.vhd
 set_global_assignment -name VHDL_TEST_BENCH_FILE Clock_Div_2.vht
 set_global_assignment -name VHDL_FILE Clock_Div_5.vhd
 set_global_assignment -name VHDL_TEST_BENCH_FILE Clock_Div_5.vht
-set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
-set_location_assignment PIN_89 -to Clk
-set_location_assignment PIN_91 -to nReset
-set_location_assignment PIN_94 -to CPU_Clock
-set_location_assignment PIN_95 -to PS2_Clock
+set_global_assignment -name VHDL_FILE Address_Decoder.vhd
+set_global_assignment -name VHDL_TEST_BENCH_FILE Address_Decoder.vht
+set_global_assignment -name EDA_TEST_BENCH_FILE Support.vht -section_id Support_TestBench
+set_global_assignment -name EDA_TEST_BENCH_FILE Clock_Div_2.vht -section_id Support_TestBench
+set_global_assignment -name EDA_TEST_BENCH_FILE Clock_Div_5.vht -section_id Support_TestBench
+set_global_assignment -name EDA_TEST_BENCH_FILE Address_Decoder.vht -section_id Support_TestBench
