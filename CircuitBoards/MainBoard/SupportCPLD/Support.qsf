@@ -69,7 +69,10 @@ set_global_assignment -name VHDL_FILE Clock_Div_5.vhd
 set_global_assignment -name VHDL_TEST_BENCH_FILE Clock_Div_5.vht
 set_global_assignment -name VHDL_FILE Address_Decoder.vhd
 set_global_assignment -name VHDL_TEST_BENCH_FILE Address_Decoder.vht
+set_global_assignment -name VHDL_FILE DTACK.vhd
+set_global_assignment -name VHDL_TEST_BENCH_FILE DTACK.vht
 set_global_assignment -name EDA_TEST_BENCH_FILE Support.vht -section_id Support_TestBench
 set_global_assignment -name EDA_TEST_BENCH_FILE Clock_Div_2.vht -section_id Support_TestBench
 set_global_assignment -name EDA_TEST_BENCH_FILE Clock_Div_5.vht -section_id Support_TestBench
 set_global_assignment -name EDA_TEST_BENCH_FILE Address_Decoder.vht -section_id Support_TestBench
+set_global_assignment -name EDA_TEST_BENCH_FILE DTACK.vht -section_id Support_TestBench
