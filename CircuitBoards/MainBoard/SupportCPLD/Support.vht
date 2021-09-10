@@ -26,6 +26,9 @@ ARCHITECTURE Behavior OF Support_TB IS
       Address_In : IN STD_LOGIC_VECTOR (23 DOWNTO 0);                           -- Address Bus
       DTACK_ATA : IN STD_LOGIC;                                                 -- ATA Data Acknowledge
       DTACK_NET : IN STD_LOGIC;                                                 -- Network Data Acknowledge
+      IRQ_ATA : IN STD_LOGIC;                                                   -- ATA IRQ
+      IRQ_K : IN STD_LOGIC;                                                     -- Keyboard IRQ
+      IRQ_M : IN STD_LOGIC;                                                     -- Mouse IRQ
 
       CPU_Clock : OUT  STD_LOGIC;                                               -- CPU Clock
       PS2_Clock : OUT  STD_LOGIC;                                               -- PS2 Clock
@@ -47,6 +50,11 @@ ARCHITECTURE Behavior OF Support_TB IS
       nDSACK0 : OUT STD_LOGIC;                                                  -- Data Transfer Acknowledge 0
       nDSACK1 : OUT  STD_LOGIC;                                                 -- Data Transfer Acknowledge 1
       nRD : OUT STD_LOGIC;                                                      -- Read Strobe
+      Data_Out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);                             -- Data Out
+      nIRQ4 : OUT STD_LOGIC;                                                    -- IRQ4
+      nIRQ6 : OUT  STD_LOGIC;                                                   -- IRQ6
+      nIACK_DUART : OUT  STD_LOGIC;                                             -- DUART IACK
+      nIACK_OUT : OUT  STD_LOGIC;                                               -- Expansion IACK
       nBERR : OUT  STD_LOGIC                                                    -- Bus Error
     );
   END COMPONENT;
@@ -61,6 +69,9 @@ ARCHITECTURE Behavior OF Support_TB IS
   SIGNAL Address_In : STD_LOGIC_VECTOR (23 DOWNTO 0) := "ZZZZZZZZZZZZZZZZZZZZZZZZ"; --X"000000";
   SIGNAL DTACK_ATA : STD_LOGIC := '0';
   SIGNAL DTACK_NET : STD_LOGIC := '0';
+  SIGNAL IRQ_ATA : STD_LOGIC := '0';
+  SIGNAL IRQ_K : STD_LOGIC := '0';
+  SIGNAL IRQ_M : STD_LOGIC := '0';
 
   -- Outputs
   SIGNAL CPU_Clock : STD_LOGIC;
@@ -83,6 +94,11 @@ ARCHITECTURE Behavior OF Support_TB IS
   SIGNAL nDSACK0 : STD_LOGIC;
   SIGNAL nDSACK1 : STD_LOGIC;
   SIGNAL nRD : STD_LOGIC;
+  SIGNAL Data_Out : STD_LOGIC_VECTOR (7 DOWNTO 0);
+  SIGNAL nIRQ4 : STD_LOGIC;
+  SIGNAL nIRQ6 : STD_LOGIC;
+  SIGNAL nIACK_DUART : STD_LOGIC;
+  SIGNAL nIACK_OUT : STD_LOGIC;
   SIGNAL nBERR : STD_LOGIC;
 
   -- Clock Period Definition
@@ -101,6 +117,9 @@ BEGIN
     Address_In => Address_In,
     DTACK_ATA => DTACK_ATA,
     DTACK_NET => DTACK_NET,
+    IRQ_ATA => IRQ_ATA,
+    IRQ_K => IRQ_K,
+    IRQ_M => IRQ_M,
     CPU_Clock => CPU_Clock,
     PS2_Clock => PS2_Clock,
     nCS_FPU => nCS_FPU,
@@ -121,6 +140,11 @@ BEGIN
     nDSACK0 => nDSACK0,
     nDSACK1 => nDSACK1,
     nRD => nRD,
+    Data_Out => Data_Out,
+    nIRQ4 => nIRQ4,
+    nIRQ6 => nIRQ6,
+    nIACK_DUART => nIACK_DUART,
+    nIACK_OUT => nIACK_OUT,
     nBERR => nBERR
   );
 
@@ -911,6 +935,98 @@ BEGIN
     -- nBERR test.
     WAIT FOR 50 NS;
     nAS <= '0';
+    WAIT UNTIL nBERR = '0';
+    nAS <= '1';
+
+    -- Test Interrupt 1 Acknowledge.
+    WAIT FOR 50 NS;
+    Function_In <= "111";
+    Address_In <= X"000001";
+    nAS <= '0';
+    WAIT UNTIL nBERR = '0';
+    nAS <= '1';
+    Function_In <= "000";
+    Address_In <= "ZZZZZZZZZZZZZZZZZZZZZZZZ";
+
+    -- Test Interrupt 2 Network Acknowledge.
+    WAIT FOR 50 NS;
+    Function_In <= "111";
+    Address_In <= X"000002";
+    nAS <= '0';
+    WAIT UNTIL nDSACK0 = '0';
+    WAIT FOR 20 NS;
+    nAS <= '1';
+    Function_In <= "000";
+    Address_In <= "ZZZZZZZZZZZZZZZZZZZZZZZZ";
+
+    -- Test Interrupt 3 Acknowledge.
+    WAIT FOR 50 NS;
+    Function_In <= "111";
+    Address_In <= X"000003";
+    nAS <= '0';
+    WAIT UNTIL nBERR = '0';
+    nAS <= '1';
+    Function_In <= "000";
+    Address_In <= "ZZZZZZZZZZZZZZZZZZZZZZZZ";
+
+    -- Test Interrupt 4 ATA Acknowledge.
+    WAIT FOR 50 NS;
+    IRQ_ATA <= '1';
+    Function_In <= "111";
+    Address_In <= X"000004";
+    nAS <= '0';
+    WAIT UNTIL nDSACK0 = '0';
+    WAIT FOR 20 NS;
+    nAS <= '1';
+    IRQ_ATA <= '0';
+    Function_In <= "000";
+    Address_In <= "ZZZZZZZZZZZZZZZZZZZZZZZZ";
+
+    -- Test Interrupt 5 Acknowledge.
+    WAIT FOR 50 NS;
+    Function_In <= "111";
+    Address_In <= X"000005";
+    nAS <= '0';
+    WAIT UNTIL nBERR = '0';
+    nAS <= '1';
+    Function_In <= "000";
+    Address_In <= "ZZZZZZZZZZZZZZZZZZZZZZZZ";
+
+    -- Test Interrupt 6 Keyboard Acknowledge.
+    WAIT FOR 50 NS;
+    IRQ_K <= '1';
+    Function_In <= "111";
+    Address_In <= X"000006";
+    nAS <= '0';
+    WAIT UNTIL nDSACK0 = '0';
+    WAIT FOR 20 NS;
+    nAS <= '1';
+    IRQ_K <= '0';
+    Function_In <= "000";
+    Address_In <= "ZZZZZZZZZZZZZZZZZZZZZZZZ";
+
+    -- Test Interrupt 6 Mouse Acknowledge.
+    WAIT FOR 50 NS;
+    IRQ_M <= '1';
+    Function_In <= "111";
+    Address_In <= X"000006";
+    nAS <= '0';
+    WAIT UNTIL nDSACK0 = '0';
+    WAIT FOR 20 NS;
+    nAS <= '1';
+    IRQ_M <= '0';
+    Function_In <= "000";
+    Address_In <= "ZZZZZZZZZZZZZZZZZZZZZZZZ";
+
+    -- Test Interrupt 7 Acknowledge.
+    WAIT FOR 50 NS;
+    Function_In <= "111";
+    Address_In <= X"000007";
+    nAS <= '0';
+    WAIT UNTIL nBERR = '0';
+    nAS <= '1';
+    Function_In <= "000";
+    Address_In <= "ZZZZZZZZZZZZZZZZZZZZZZZZ";
 
     WAIT;
   END PROCESS;

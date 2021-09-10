@@ -22,6 +22,9 @@ ENTITY Support IS
     Address_In : IN STD_LOGIC_VECTOR (23 DOWNTO 0);                             -- Address Bus
     DTACK_ATA : IN STD_LOGIC;                                                   -- ATA Data Acknowledge
     DTACK_NET : IN STD_LOGIC;                                                   -- Network Data Acknowledge
+    IRQ_ATA : IN STD_LOGIC;                                                     -- ATA IRQ
+    IRQ_K : IN STD_LOGIC;                                                       -- Keyboard IRQ
+    IRQ_M : IN STD_LOGIC;                                                       -- Mouse IRQ
 
     CPU_Clock : OUT  STD_LOGIC;                                                 -- CPU Clock
     PS2_Clock : OUT  STD_LOGIC;                                                 -- PS2 Clock
@@ -43,6 +46,11 @@ ENTITY Support IS
     nDSACK0 : OUT  STD_LOGIC;                                                   -- Data Transfer Acknowledge 0
     nDSACK1 : OUT  STD_LOGIC;                                                   -- Data Transfer Acknowledge 1
     nRD : OUT STD_LOGIC;                                                        -- Read Strobe
+    Data_Out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);                               -- Data Out
+    nIRQ4 : OUT STD_LOGIC;                                                      -- IRQ4
+    nIRQ6 : OUT  STD_LOGIC;                                                     -- IRQ6
+    nIACK_DUART : OUT  STD_LOGIC;                                               -- DUART IACK
+    nIACK_OUT : OUT  STD_LOGIC;                                                 -- Expansion IACK
     nBERR : OUT  STD_LOGIC                                                      -- Bus Error
   );
 END Support;
@@ -108,6 +116,25 @@ ARCHITECTURE Behavioral OF Support IS
     );
   END COMPONENT;
 
+  -- Component Declaration for the IntAcknowledge
+  COMPONENT IntAcknowledge
+    PORT (
+      nReset : IN STD_LOGIC;                                                    -- Reset
+      nAS : IN STD_LOGIC;                                                       -- Address Strobe
+      Function_In : IN STD_LOGIC_VECTOR (2 DOWNTO 0);                           -- System Function
+      Address_In : IN STD_LOGIC_VECTOR (23 DOWNTO 0);                           -- Address Bus
+      IRQ_ATA : IN STD_LOGIC;                                                   -- ATA IRQ
+      IRQ_K : IN STD_LOGIC;                                                     -- Keyboard IRQ
+      IRQ_M : IN STD_LOGIC;                                                     -- Mouse IRQ
+      Data_Out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);                             -- Data Out
+      nDSACK0 : OUT  STD_LOGIC;                                                 -- Data Transfer Acknowledge 0
+      nIRQ4 : OUT STD_LOGIC;                                                    -- IRQ4
+      nIRQ6 : OUT  STD_LOGIC;                                                   -- IRQ6
+      nIACK_DUART : OUT  STD_LOGIC;                                             -- DUART IACK
+      nIACK_OUT : OUT  STD_LOGIC                                                -- Expansion IACK
+    );
+  END COMPONENT;
+
 BEGIN
 
   -- Instantiate the CPU Clock
@@ -160,6 +187,23 @@ BEGIN
     nCS_ROM => nCS_ROM,
     nDSACK0 => nDSACK0,
     nBERR => nBERR
+  );
+
+  -- Instantiate the IntAcknowledge
+  Int_Acknowledge : IntAcknowledge PORT MAP (
+    nReset => nReset,
+    nAS => nAS,
+    Function_In => Function_In,
+    Address_In => Address_In,
+    IRQ_ATA => IRQ_ATA,
+    IRQ_K => IRQ_K,
+    IRQ_M => IRQ_M,
+    Data_Out => Data_Out,
+    nDSACK0 => nDSACK0,
+    nIRQ4 => nIRQ4,
+    nIRQ6 => nIRQ6,
+    nIACK_DUART => nIACK_DUART,
+    nIACK_OUT => nIACK_OUT
   );
 
   -- Generate Read Strobe.
